@@ -35,6 +35,7 @@ public class fileupload {
 		//driver.findElement(By.xpath("//input[@id='html5_1ii9tg57c4va15fh1uhq1f9610o84']")).sendKeys("C:\\Users\\unnat\\Downloads\\groupB.pdf");
 
 		 driver.findElement(By.xpath("//input[@type='file']")).sendKeys("C:\\Users\\unnat\\Downloads\\groupB.pdf");
+	
 		
 		 Thread.sleep(5000);
 		
