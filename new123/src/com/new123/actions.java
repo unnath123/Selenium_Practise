@@ -25,9 +25,9 @@ public class actions {
 		action.moveToElement(driver.findElement(By.xpath("//div[text()='Add-ons']"))).build().perform();
 		
 		//DragAndDrop
-		action.clickAndHold("Element - A Drag")
-		.moveToElement("Element - B Drop location")
-		.release().build().perform();
+//		action.clickAndHold("Element - A Drag")
+//		.moveToElement("Element - B Drop location")
+//		.release().build().perform();
 		
 		Thread.sleep(3000);
 		
