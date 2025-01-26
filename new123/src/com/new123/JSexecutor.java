@@ -3,36 +3,35 @@ package com.new123;
 import java.time.Duration;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.interactions.Actions;
 
-public class actions {
+public class JSexecutor {
+
 	public static void main(String[] args) throws InterruptedException {
+		// TODO Auto-generated method stub
 		System.setProperty("webdriver.chrome.driver", "D:\\Selenium\\chromedriver-win64\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		
-		driver.get("https://www.spicejet.com/");
-		driver.manage().window().maximize();
+		driver.get("https://www.ilovepdf.com/pdf_to_word");
 		
 		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+	
+		WebElement element = driver.findElement(By.cssSelector("a[id='pickfiles']"));
 		
-		//Thread.sleep(3000);
-		//MouseHover
-		Actions action =new Actions(driver);
-    	WebElement ele = driver.findElement(By.xpath("//div[text()='Add-ons']"));
-		action.moveToElement(driver.findElement(By.xpath("//div[text()='Add-ons']"))).perform();
+		JavascriptExecutor js = ((JavascriptExecutor)driver);
+		//js.executeScript("arguments[0].style.border= '3px solid black'; arguments[0].style.padding='5px'", element);
 		
-		//DragAndDrop
-//		action.clickAndHold("Element - A Drag")
-//		.moveToElement("Element - B Drop location")
-//		.release().build().perform();
+		js.executeScript("arguments[0].style.outline = '3px solid black'; arguments[0].style.outlineOffset = '10px';", element);
+
 		
-		Thread.sleep(3000);
+		Thread.sleep(5000);
 		
 		driver.quit();
+
 	}
 
 }
