@@ -17,6 +17,7 @@ public class WebTables {
 		driver.get("https://trends.builtwith.com/websitelist/Responsive-Tables");
 		
 		WebElement element  = driver.findElement(By.xpath("//td[contains(text(), 'newsletter.someecards')]/preceding-sibling::td[@class='pr-1']"));
+		//   //tbody/tr[i]/td[j];
 		//System.out.println(element.getText());
 		element.click();
 
