@@ -24,8 +24,8 @@ public class Calendars {
 		
 		driver.findElement(By.xpath("//label[@for='departure']")).click();
 		
-		String Month = "February";
-		int date = 26;
+		String Month = "January";
+		int date = 31;
 		
 		
 		
@@ -37,6 +37,10 @@ public class Calendars {
 			if((element.getText()).contains(Month)) {
 				System.out.println("hurray");
 				DateSelect(element, date);
+				break;
+			}
+			else {
+				System.out.println("Click next button");
 			}
 			
 		}
