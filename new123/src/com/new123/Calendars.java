@@ -24,14 +24,17 @@ public class Calendars {
 		
 		driver.findElement(By.xpath("//label[@for='departure']")).click();
 		
-		String Month = "January";
-		int date = 31;
+		String Month = "February";
+		int date = 22;
 		
 		
 		
 		List<WebElement> elements = driver.findElements(By.xpath("//div[@class='DayPicker-Month']"));
 //		System.out.println(elements.get(1).getText());
 //		DateSelect(elements.get(1), date);
+		System.out.println(elements.get(0));
+		System.out.println(elements.get(1));
+		
 		
 		for(WebElement element : elements) {
 			if((element.getText()).contains(Month)) {
