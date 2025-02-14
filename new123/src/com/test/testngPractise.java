@@ -6,15 +6,20 @@ import org.testng.annotations.Test;
 
 public class testngPractise {
 
-	@BeforeClass
-	public void LaunchBrowser() {
-		System.out.println("Browser Launched");
-	}
-
-	@BeforeMethod
-	public void URL() {
-		System.out.println("URL Launched");
-	}
+//	@BeforeClass
+//	public void LaunchBrowser() {
+//		System.out.println("Browser Launched");
+//	}
+//
+//	@BeforeMethod
+//	public void URL() {
+//		System.out.println("URL Launched");
+//	}
+//	
+//	@BeforeMethod
+//	public void URL1() {
+//		System.out.println("URL Launched");
+//	}
 	
 	@Test
 	public void Testing1() {

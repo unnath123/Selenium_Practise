@@ -7,9 +7,17 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.testng.annotations.Test;
 
 public class actions {
+	@Test
+	public void testingTest() {
+		System.out.println("working");
+	}
+	
 	public static void main(String[] args) throws InterruptedException {
+		
+		
 		System.setProperty("webdriver.chrome.driver", "D:\\Selenium\\chromedriver-win64\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		
@@ -26,9 +34,9 @@ public class actions {
 		action.moveToElement(driver.findElement(By.xpath("//div[text()='Add-ons']"))).perform();
 		
 		//DragAndDrop
-//		action.clickAndHold("Element - A Drag")
-//		.moveToElement("Element - B Drop location")
-//		.release().build().perform();
+//		action.clickAndHold("Element - Click on A")
+//		.moveToElement("Element - Drag")
+//		.release("drop").build().perform();
 		
 		Thread.sleep(3000);
 		
