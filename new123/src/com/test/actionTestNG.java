@@ -11,8 +11,12 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-public class actionTestNG {
+
+
+public class actionTestNG{
     WebDriver driver;
+    
+    
     
     @BeforeClass
     public void setup() {
@@ -44,4 +48,8 @@ public class actionTestNG {
     public void tearDown() {
         driver.quit();
     }
+
+
+
+
 }
